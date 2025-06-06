@@ -1,35 +1,42 @@
 import Estudios from "./estudios";
 import SoftSkills from "./softskills";
 
-function Main() {
+function Main({ section, setSection }) {
   return (
     <main>
-
-      <div>
-
-        <h1>Hola, Soy Diaz Valdez Ignacio.</h1>
-
-        <h2>Programador jr</h2>
-
-        <div className="main-buttons">
-
-          <button className="main-btn">SoftSkills</button>
-          <button className="main-btn">Estudios</button>
-
+      {section === "home" && (
+        <div>
+          <h1>Hola, Soy Diaz Valdez Ignacio.</h1>
+          <h2>Programador jr</h2>
+          <div className="main-buttons">
+            <button className="main-btn" onClick={() => setSection("softskills")}>
+              SoftSkills
+            </button>
+            <button className="main-btn" onClick={() => setSection("estudios")}>
+              Estudios
+            </button>
+          </div>
+          <div className="social-icons">
+            <a href="https://github.com/IgnacioDiazV" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
         </div>
+      )}
 
-        <div className="social-icons">
-
-          <a href="https://github.com/IgnacioDiazV" target="_blank" rel="noopener noreferrer">
-
-          <i className="fab fa-github"></i>
-          
-          </a>
-
+      {section === "softskills" && (
+        <div>
+          <SoftSkills />
+          <button className="main-btn" onClick={() => setSection("home")}>Volver</button>
         </div>
-        
-      </div>
+      )}
 
+      {section === "estudios" && (
+        <div>
+          <Estudios />
+          <button className="main-btn" onClick={() => setSection("home")}>Volver</button>
+        </div>
+      )}
     </main>
   );
 }

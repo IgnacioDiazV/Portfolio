@@ -1,14 +1,16 @@
+import React, { useState } from 'react';
 import Header from '../components/header.jsx';
 import Main from '../components/main.jsx';
 import Footer from '../components/footer.jsx';
-import React from 'react';
-import style from '../App.css';
+import styles from '../App.css';
 
 function Home() {
+  const [section, setSection] = useState("home");
+
   return (
     <div>
-      <Header />
-      <Main />
+      <Header setSection={setSection} />
+      <Main section={section} setSection={setSection} />
       <Footer />
     </div>
   );
