@@ -1,4 +1,128 @@
-.App {
+header {
+
+  background: #181818;
+  color: #ffd600;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #333;
+
+}
+
+.navbar {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.navbar li a {
+  color: #ffd600;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.navbar li a:hover {
+  color: #fff700;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 24px;
+  align-items: left;
+}
+
+/* Main */
+
+body, main {
+  background: #181818;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #ffd600;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ajusta según el tamaño del header */
   text-align: center;
 }
 
+main h1, main h2, main p {
+  color: #ffd600;
+  margin: 16px 0;
+}
+
+main h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+main h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+main p {
+  font-size: 1.5rem;
+  max-width: 700px;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 32px 0 16px 0;
+}
+
+.main-btn {
+  background: transparent;
+  color: #ffd600;
+  border: 2px solid #ffd600;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-btn:hover {
+  background: #ffd600;
+  color: #181818;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  color: #ffd600;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #fff700;
+}
