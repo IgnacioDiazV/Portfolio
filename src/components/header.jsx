@@ -1,5 +1,3 @@
-import styles from '../App.css';
-
 function Header({ setSection }) {
   return (
     <header>
