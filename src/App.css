@@ -142,21 +142,21 @@ footer {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center; /* Centra las barras respecto al título */
 }
 
 .idiomas-list li {
   margin-bottom: 28px;
   text-align: left;
   width: 100%;
-  max-width: 420px; 
+  max-width: 420px; /* Limita el ancho para que no se pase */
 }
 
 .progress-bar {
   background: #333;
   border-radius: 8px;
-  width: 400px;         
-  height: 20px;  
+  width: 400px;         /* Más ancha */
+  height: 20px;         /* Más alta */
   margin-top: 8px;
   margin-bottom: 0;
   overflow: hidden;
@@ -168,4 +168,192 @@ footer {
   height: 100%;
   border-radius: 8px 0 0 8px;
   transition: width 0.5s;
+}
+
+.softskills-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.softskills-left, .softskills-right {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 500px;
+  background: #202020;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #0003;
+  padding: 32px 28px 28px 28px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 24px 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.skills-list,
+.exp-list,
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.skills-list li,
+.exp-list li,
+.projects-list li,
+.estudios-left li,
+.estudios-right li {
+  background: rgba(40, 40, 40, 0.95); /* Fondo más claro y con leve transparencia */
+  border: 1.5px solid #ffd60033;      /* Borde sutil dorado translúcido */
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #ffd600;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 16px #0004;
+  transition: background 0.2s, border 0.2s;
+}
+
+.skills-list li:hover,
+.exp-list li:hover,
+.projects-list li:hover,
+.estudios-left li:hover,
+.estudios-right li:hover {
+  background: #232323;
+  border: 1.5px solid #ffd600cc;
+}
+
+.exp-date {
+  color: #fff700;
+  font-size: 1rem;
+}
+
+.exp-desc {
+  color: #ffd600;
+  font-size: 1rem;
+}
+
+.estudios-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
+}
+
+.estudios-left, .estudios-right {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 500px;
+  background: #202020;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #0003;
+  padding: 32px 28px 28px 28px;
+  margin-bottom: 24px;
+}
+
+.estudios-left {
+  margin-right: 0;
+}
+
+.estudios-right {
+  margin-left: 0;
+}
+
+.estudios-left h2,
+.estudios-right h2 {
+  font-size: 2.1rem;
+  margin-bottom: 18px;
+  margin-top: 0;
+  text-align: left;
+  color: #ffd600;
+  letter-spacing: 1px;
+}
+
+.estudios-left ul,
+.estudios-right ul {
+  margin: 0 0 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.estudios-left li,
+.estudios-right li {
+  background: rgba(40, 40, 40, 0.95); /* Fondo más claro y con leve transparencia */
+  border: 1.5px solid #ffd60033;      /* Borde sutil dorado translúcido */
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #ffd600;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 16px #0004;
+  transition: background 0.2s, border 0.2s;
+}
+
+.idiomas-list {
+  margin-top: 18px;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.idiomas-list li {
+  margin-bottom: 22px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.progress-bar {
+  background: #333;
+  border-radius: 8px;
+  width: 100%;
+  height: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.progress {
+  background: #ffd600;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.5s;
+}
+
+@media (max-width: 900px) {
+  .softskills-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .softskills-left, .softskills-right {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .section-title {
+    text-align: center;
+  }
+  .estudios-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 24px 0;
+  }
+  .estudios-left, .estudios-right {
+    max-width: 100%;
+    min-width: 0;
+  }
 }
